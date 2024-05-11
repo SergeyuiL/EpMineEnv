@@ -30,8 +30,7 @@ def warp_action(action):
 class EpMineEnv(gym.Env):
 
     def __init__(self,
-                 file_name: str = "envs/SingleAgent/MineField_Linux-0510-random/drl.x86_64",
-                # file_name: str = "../MineField_Linux-0510/drl.x86_64",
+                 file_name: str = "/home/casiarobot/pycode/EpMineEnv-main/envs/SingleAgent/MineField_Linux-0510-random/drl.x86_64",
                  port: Optional[int] = 2000,
                  seed: int = 0,
                  work_id: int = 0,
@@ -39,7 +38,7 @@ class EpMineEnv(gym.Env):
                  max_episode_steps: int = 1000,
                  only_image: bool = True,
                  only_state: bool = False,
-                 no_graph: bool = False):
+                 no_graph: bool = True):
         engine_configuration_channel = EngineConfigurationChannel()
         engine_configuration_channel.set_configuration_parameters(width=200, height=100,
                                                                       time_scale=time_scale)
